@@ -1,38 +1,140 @@
+/* App container */
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form styling */
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008cba;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005c7a;
 }
 
-.App-link {
-  color: #61dafb;
+/* Container for pending, completed, and bot areas */
+.container {
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Pending area styling */
+.pending-area {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-right: 10px;
+}
+.pending-area h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.pending-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pending-area li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.pending-area li:last-child {
+  border-bottom: none;
+}
+.pending-area .order-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.pending-area .order-info h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.pending-area .order-info p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Completed area styling */
+.completed-area {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-right: 10px;
+}
+.completed-area h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.completed-area .order {
+  margin-bottom: 10px;
+}
+
+/* Bot area styling */
+.bot-area {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+}
+.bot-area h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.bot-area .bot-info {
+  margin-bottom: 10px;
+}
+.bot-area .bot-info p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.bot-area .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.bot-area .button-container button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008cba;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
